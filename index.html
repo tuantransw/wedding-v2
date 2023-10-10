@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>My test</title>
+  </head>
+  <body onload="runInit();">
+    <div id="loader" class="loader" style="display: block;">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+
+    <div id="container" class="container" style="display:none;">
+      <div class="audio-group">
+        <button onclick="audioClick()" class="btn-music" id="btnMusic">
+          <img
+            id="imgMusic"
+            src="https://tuantransw.github.io/wedding/Images/Icons/pause.png"
+            alt="music"
+          />
+          <span class="span-music">Music</span>
+        </button>
+        <audio id="backgroundAudio" autoplay loop>
+          <source
+            src="audios/Stephen Sanchez  Until I Found You Piano Version.mp 3"
+            type="audio/mpeg"
+          />
+        </audio>
+      </div>
+      <div class="home" id="home">
+        <div class="text-group">
+          <div class="label-name">Tuấn Anh</div>
+          <div class="label-or">&</div>
+          <div class="label-name">Ngọc Anh</div>
+          <div class="label-save-date">Save the date</div>
+          <div class="label-date">22 - 10</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/router.js"></script>
+  </body>
+</html>
+
+<!-- <img loading='lazy' src='https://placekitten.com/400/400' width='400' height='400' alt=''> -->

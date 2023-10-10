@@ -1,0 +1,379 @@
+@font-face {
+  font-family: DancingScript;
+  src: url(../fonts/DancingScript-Bold.ttf);
+}
+
+@font-face {
+  font-family: ICielDomaine;
+  src: url(../fonts/iCielDomaineDisplay-Bold.ttf);
+}
+
+
+*   {
+  font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  margin-left: 10%;
+  transform: translate3d(-50%, -50%, 0);
+}
+.dot {
+  width: 24px;
+  height: 24px;
+  background: #3ac;
+  border-radius: 100%;
+  display: inline-block;
+  animation: slide 1s infinite;
+}
+.dot:nth-child(1) {
+  animation-delay: 0.1s;
+  background: #32aacc;
+}
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+  background: #64aacc;
+}
+.dot:nth-child(3) {
+  animation-delay: 0.3s;
+  background: #96aacc;
+}
+.dot:nth-child(4) {
+  animation-delay: 0.4s;
+  background: #c8aacc;
+}
+.dot:nth-child(5) {
+  animation-delay: 0.5s;
+  background: #faaacc;
+}
+@-moz-keyframes slide {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes slide {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-o-keyframes slide {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes slide {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.home {
+  width: 100vw;
+  height: 100vh;
+
+  background-position: top;
+  background-size: cover;
+
+  background-image: url(../images/0S0A0945.jpg);
+}
+
+.btn-music {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 500;
+  width: 101px;
+  height: 36px;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  /* background: hsla(0, 0%, 57.6%, 0.3); */
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  border-radius: 26px;
+  cursor: pointer;
+}
+
+.span-music {
+  margin-left: 10px;
+}
+
+#album {
+  padding-top: 30px;
+  text-align: center;
+}
+
+#album .header {
+  padding-bottom: 30px;
+}
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {
+  opacity: 0.7;
+}
+
+/* Popup album (background) */
+.popup-album {
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Sit on top */
+  padding-top: 15px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+
+  background-color: black;
+}
+
+/* Popup album content (image) */
+.popup-album-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 500px;
+}
+
+/* Caption of Popup album image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.popup-album-content,
+#caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* The Close Button */
+.close-popup-album {
+  position: absolute;
+  top: 0;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 80px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close-popup-album:hover,
+.close-popup-album:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navbar {
+  margin: auto;
+  margin-bottom: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  border-radius: 10px;
+  background: hsla(0, 0%, 0%, 0.393);
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 50px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.text-group {
+  position: absolute;
+  top: 0;
+  left: 14%;
+  width: 14%;
+  height: 100%;
+  background: hsla(0, 0%, 0%, 0.393);
+  padding: 30px;
+  transform: translate(0%,0%);
+}
+.label-name {
+  font-family: DancingScript;
+  color: white;
+  font-size: 140px;
+  text-align: center;
+ }
+
+ .label-or {
+  font-family: DancingScript;
+  color: white;
+  font-size: 40px;
+  text-align: center;
+ }
+
+ .label-save-date {
+  padding-top: 10px;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+  font-size: 40px;
+ }
+
+ .label-date {
+  text-align: center;
+  margin-top: 10px;
+  font-family: ICielDomaine;
+  color: white;
+  font-size: 50px;
+ }
+
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+ 
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  
+}
+
+
+section {
+  display: none;
+}
+#about:target,
+#services:target,
+#contact:target {
+  display: block;
+}
