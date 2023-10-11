@@ -130,7 +130,6 @@ body {
   outline: none;
   padding: 0;
   margin: 0;
-  /* background: hsla(0, 0%, 57.6%, 0.3); */
   background: rgba(0, 0, 0, 0.5);
   color: #fff;
   border: none;
@@ -144,68 +143,6 @@ body {
 
 .span-music {
   margin-left: 10px;
-}
-
-#album {
-  padding-top: 30px;
-  text-align: center;
-}
-
-#album .header {
-  padding-bottom: 30px;
-}
-
-#myImg {
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-#myImg:hover {
-  opacity: 0.7;
-}
-
-/* Popup album (background) */
-.popup-album {
-  position: fixed; /* Stay in place */
-  z-index: 2; /* Sit on top */
-  padding-top: 15px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100vw; /* Full width */
-  height: 100vh; /* Full height */
-  overflow: hidden; /* Enable scroll if needed */
-
-  background-color: black;
-}
-
-/* Popup album content (image) */
-.popup-album-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 500px;
-}
-
-/* Caption of Popup album image */
-#caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
-}
-
-/* Add Animation */
-.popup-album-content,
-#caption {
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-  animation-name: zoom;
-  animation-duration: 0.6s;
 }
 
 @-webkit-keyframes zoom {
@@ -226,154 +163,201 @@ body {
   }
 }
 
-/* The Close Button */
-.close-popup-album {
-  position: absolute;
-  top: 0;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 80px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.close-popup-album:hover,
-.close-popup-album:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.navbar {
-  margin: auto;
-  margin-bottom: 20px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  border-radius: 10px;
-  background: hsla(0, 0%, 0%, 0.393);
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 20px 50px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: #111;
-}
 
 .text-group {
   position: absolute;
-  top: 0;
-  left: 14%;
-  width: 14%;
+  left: 15%;
+  width: 480px;
   height: 100%;
   background: hsla(0, 0%, 0%, 0.393);
-  padding: 30px;
+  padding-top: 5%;
+  padding-left: 30px;
+  padding-right: 30px;
   transform: translate(0%,0%);
 }
 .label-name {
   font-family: DancingScript;
   color: white;
-  font-size: 140px;
+  font-size: 150px;
   text-align: center;
  }
 
  .label-or {
   font-family: DancingScript;
   color: white;
-  font-size: 40px;
+  font-size: 60px;
   text-align: center;
  }
 
  .label-save-date {
-  padding-top: 10px;
+  padding-top: 20px;
   text-align: center;
   font-family: 'Times New Roman', Times, serif;
-  color: white;
-  font-size: 40px;
- }
-
- .label-date {
-  text-align: center;
-  margin-top: 10px;
-  font-family: ICielDomaine;
   color: white;
   font-size: 50px;
  }
 
-
-.row {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-  padding: 0 4px;
-}
-
-/* Create four equal columns that sits next to each other */
-.column {
-  -ms-flex: 25%; /* IE10 */
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
-}
-
-.column img {
-  margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;
-}
+ .label-date {
+  text-align: center;
+  margin-top: 25px;
+  font-family: ICielDomaine;
+  color: white;
+  font-size: 100px;
+ }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-
+  .text-group {
+    left: 12%;
+    width: 144px;
+  }
+  .label-name{
+    font-size: 44px
+  }
+  .label-or {
+    font-size: 14px;
+  }
+  .label-save-date {
+    font-size: 15px;
+  }
+  .label-date {
+    font-size: 28px;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-
+  .text-group {
+    left: 12%;
+    width: 144px;
+  }
+  .label-name{
+    font-size: 44px
+  }
+  .label-or {
+    font-size: 14px;
+  }
+  .label-save-date {
+    font-size: 15px;
+  }
+  .label-date {
+    font-size: 28px;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-
+  .text-group {
+    left: 12%;
+    width: 144px;
+  }
+  .label-name{
+    font-size: 44px
+  }
+  .label-or {
+    font-size: 14px;
+  }
+  .label-save-date {
+    font-size: 15px;
+  }
+  .label-date {
+    font-size: 28px;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
- 
+  .text-group {
+    left: 12%;
+    width: 144px;
+  }
+  .label-name{
+    font-size: 44px
+  }
+  .label-or {
+    font-size: 14px;
+  }
+  .label-save-date {
+    font-size: 15px;
+  }
+  .label-date {
+    font-size: 28px;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  
+  .text-group {
+    left: 12%;
+    width: 144px;
+  }
+  .label-name{
+    font-size: 44px
+  }
+  .label-or {
+    font-size: 14px;
+  }
+  .label-save-date {
+    font-size: 15px;
+  }
+  .label-date {
+    font-size: 28px;
+  }
 }
 
-
-section {
-  display: none;
+@media only screen and (min-width: 1920px) {
+  .text-group {
+    left: 14%;
+    width: 215px;
+  }
+  .label-name{
+    font-size: 66px
+  }
+  .label-or {
+    font-size: 22px;
+  }
+  .label-save-date {
+    font-size: 26px;
+  }
+  .label-date {
+    font-size: 44px;
+  }
 }
-#about:target,
-#services:target,
-#contact:target {
-  display: block;
+
+@media only screen and (min-width: 2560px) {
+  .text-group {
+    left: 15%;
+    width: 320px;
+  }
+  .label-name{
+    font-size: 100px
+  }
+  .label-or {
+    font-size: 33px;
+  }
+  .label-save-date {
+    font-size: 40px;
+  }
+  .label-date {
+    font-size: 66px;
+  }
+}
+
+@media only screen and (min-width: 3840px) {
+  .text-group {
+    left: 15%;
+    width: 480px;
+  }
+  .label-name{
+    font-size: 150px
+  }
+  .label-or {
+    font-size: 50px;
+  }
+  .label-save-date {
+    font-size: 60px;
+  }
+  .label-date {
+    font-size: 100px;
+  }
 }
